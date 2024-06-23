@@ -24,7 +24,11 @@ async function getWebsite() {
       const lister = Array.from(document.getElementsByTagName('body'));
       lister.map((unit) => {
         console.log("Changer!");
-        unit.style.color = 'red';}
+        let adder = document.createElement('p');
+        adder.innerHTML = "Hello Friends";
+        unit.style.color = 'red';
+        unit.append(adder);
+      }
       );
     }
 }, [highlight]);
